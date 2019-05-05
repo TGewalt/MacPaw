@@ -1,0 +1,690 @@
+{
+	"info": {
+		"_postman_id": "86a2bfb9-c541-4691-977a-302e5b26456c",
+		"name": "Current weather data",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "byCityName",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": {{petid}},\r\n  \"category\": {\r\n    \"id\": 0,\r\n    \"name\": \"string\"\r\n  },\r\n  \"name\": \"doggie\",\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n}"
+				},
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/weather?q=Kyiv&APPID=edaa320f2c4178416ec47bb124f08b28",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Kyiv"
+						},
+						{
+							"key": "APPID",
+							"value": "edaa320f2c4178416ec47bb124f08b28"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "byCityName Copy",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": {{petid}},\r\n  \"category\": {\r\n    \"id\": 0,\r\n    \"name\": \"string\"\r\n  },\r\n  \"name\": \"doggie\",\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n}"
+				},
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/weather?q=Kiev&APPID=edaa320f2c4178416ec47bb124f08b28",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Kiev"
+						},
+						{
+							"key": "APPID",
+							"value": "edaa320f2c4178416ec47bb124f08b28"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "byCityName Copy Copy",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": {{petid}},\r\n  \"category\": {\r\n    \"id\": 0,\r\n    \"name\": \"string\"\r\n  },\r\n  \"name\": \"doggie\",\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n}"
+				},
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/weather?q=Misto Kyyiv&APPID=edaa320f2c4178416ec47bb124f08b28",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Misto Kyyiv"
+						},
+						{
+							"key": "APPID",
+							"value": "edaa320f2c4178416ec47bb124f08b28"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "byCityId",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "73a992b3-110d-4d59-9c14-e6f01de97cfb",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/weather?id=703448&APPID=edaa320f2c4178416ec47bb124f08b28",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "703448"
+						},
+						{
+							"key": "APPID",
+							"value": "edaa320f2c4178416ec47bb124f08b28"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "byCityId Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "73a992b3-110d-4d59-9c14-e6f01de97cfb",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/weather?id=703447&APPID=edaa320f2c4178416ec47bb124f08b28",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "703447"
+						},
+						{
+							"key": "APPID",
+							"value": "edaa320f2c4178416ec47bb124f08b28"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "byCityId Copy Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "73a992b3-110d-4d59-9c14-e6f01de97cfb",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/weather?id=400013812&APPID=edaa320f2c4178416ec47bb124f08b28",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "400013812"
+						},
+						{
+							"key": "APPID",
+							"value": "edaa320f2c4178416ec47bb124f08b28"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "byGeoCoord",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "88dce7e3-5677-48fc-9de4-3b84be3ee0ee",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/weather?lat=50.43&lon=30.52&APPID=edaa320f2c4178416ec47bb124f08b28",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "50.43"
+						},
+						{
+							"key": "lon",
+							"value": "30.52"
+						},
+						{
+							"key": "APPID",
+							"value": "edaa320f2c4178416ec47bb124f08b28"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "byGeoCoord Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "88dce7e3-5677-48fc-9de4-3b84be3ee0ee",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/weather?lat=50.45&lon=30.52&APPID=edaa320f2c4178416ec47bb124f08b28",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "50.45",
+							"description": "\"lon\": 30.516666,\n      \"lat\": 50.433334"
+						},
+						{
+							"key": "lon",
+							"value": "30.52"
+						},
+						{
+							"key": "APPID",
+							"value": "edaa320f2c4178416ec47bb124f08b28"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "byGeoCoord Copy Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "88dce7e3-5677-48fc-9de4-3b84be3ee0ee",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/weather?lat=50.433334&lon=30.516666&APPID=edaa320f2c4178416ec47bb124f08b28",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "50.433334",
+							"description": "\"lon\": 30.516666,\n      \"lat\": 50.433334"
+						},
+						{
+							"key": "lon",
+							"value": "30.516666"
+						},
+						{
+							"key": "APPID",
+							"value": "edaa320f2c4178416ec47bb124f08b28"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "byZIP",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/weather?zip=02160,ua&APPID=edaa320f2c4178416ec47bb124f08b28",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "zip",
+							"value": "02160,ua"
+						},
+						{
+							"key": "APPID",
+							"value": "edaa320f2c4178416ec47bb124f08b28"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "byZIP Copy",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/weather?zip=02160,ua&APPID=edaa320f2c4178416ec47bb124f08b28",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "zip",
+							"value": "02160,ua"
+						},
+						{
+							"key": "APPID",
+							"value": "edaa320f2c4178416ec47bb124f08b28"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "byZIP Copy Copy",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/weather?zip=02160,ua&APPID=edaa320f2c4178416ec47bb124f08b28",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "zip",
+							"value": "02160,ua"
+						},
+						{
+							"key": "APPID",
+							"value": "edaa320f2c4178416ec47bb124f08b28"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "byZIP Copy Copy Copy",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/weather?zip=02160ua&APPID=edaa320f2c4178416ec47bb124f08b28",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "zip",
+							"value": "02160ua"
+						},
+						{
+							"key": "APPID",
+							"value": "edaa320f2c4178416ec47bb124f08b28"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "b1d1ea2e-1ae9-48fb-a185-3958b55132e5",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "64f7629f-3cc5-415f-8db3-a4f35be6adfd",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
